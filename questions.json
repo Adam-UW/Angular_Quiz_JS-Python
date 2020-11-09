@@ -1,0 +1,11 @@
+{
+  "questions":[
+      {"q":"What is the DOM in Javascript?", 
+          "a": "DOM", "b":"GOM", "c": "COM"},
+      {"q":"What is the Print in Javascript?", 
+          "a": "println", "b":"print", "c": "stdout"},
+      {"q":"What is the ()=> in Javascript?", 
+          "a": "arrow", "b":"narrow", "c": "farrow"}
+  ]
+}
+

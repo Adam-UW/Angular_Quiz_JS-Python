@@ -1,0 +1,11 @@
+{
+    "questions":[
+        {"q":"How to print to console in Python?", 
+            "a": "print", "b":"println", "c": "console.log"},
+        {"q":"Is Python compiled or interpreted language?", 
+            "a": "compiled", "b":"interpreted", "c": "both"},
+        {"q":"Python does not support inheritance?", 
+            "a": "true", "b":"false", "c": "none"}
+    ]
+}
+

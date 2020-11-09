@@ -1,0 +1,22 @@
+<p>questions works!</p>
+
+<div>
+    <input type="button" value="Load Questions" name="" id=""
+    (click)="loadQuestions()" />
+    <hr>
+    <table border="1">
+
+        <tr>
+            <th>Question</th>
+            <th> a</th>
+            <th>b</th>
+            <th>c</th>
+            <th>d</th>
+        </tr>
+        <tr *ngFor="let pp of questionsInfo">
+            <td>{{pp.q}}</td>
+            <td>{{pp.a}}</td>
+            <td>{{pp.c}}</td>
+        </tr>
+    </table>
+</div>

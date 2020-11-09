@@ -1,0 +1,86 @@
+<h3 style="text-align: center;">{{title}}</h3>
+<hr />
+
+<div class="container">
+
+
+        <input type="button" name="" id="" value="Start the Quiz" (click)="justCheck()" 
+         class="btn btn-primary" [disabled]="loggedIn"/>
+
+        <ng-template [ngIf]="loggedIn">
+            <p>Question Number: {{counter}}</p>
+            <h2>{{questionsInfo[counter]['q']}}</h2>
+            
+            <div class="row" style="margin: 2rem;">
+                <div class="col-lg-6" style="background-color: #9ddfd3; padding: 3px; margin: 3px;">
+                    <input class="form-check-input" type="checkbox" value=" {{questionsInfo[counter]['a']}}" id="defaultCheck0"
+                    (change)="toggleEditable($event)">
+                    <label class="form-check-label" for="defaultCheck0" unchecked>
+                     {{questionsInfo[counter]['a']}}
+                    </label>
+                </div>
+                <div class="col-lg-6" style="background-color: #9ddfd3; padding: 3px; margin: 3px;">
+                    <input class="form-check-input" type="checkbox" value=" {{questionsInfo[counter]['b']}}" id="defaultCheck1" 
+                    (change)="toggleEditable($event)">
+                    <label class="form-check-label" for="defaultCheck1">
+                        {{questionsInfo[counter]['b']}}
+                    </label>
+                </div>
+                <div class="col-lg-6" style="background-color: #9ddfd3; padding: 3px; margin: 3px;">
+                    <input class="form-check-input" type="checkbox" value=" {{questionsInfo[counter]['c']}}" id="defaultCheck2"
+                    (change)="toggleEditable($event)" checked >
+                    <label class="form-check-label" for="defaultCheck2">
+                        {{questionsInfo[counter]['c']}}
+                    </label>
+                </div>
+              </div>
+              <hr />
+
+              <div class="container" style="text-align: center;">
+                <button class="btn btn-light" (click)="getfirst()">First</button>
+                <button class="btn btn-light" (click)="decrement()" [disabled]="counter == 0">Previous</button>
+                <button class="btn btn-lg btn-primary" (click)="increment()" [disabled]="counter == questionsInfo.length-1">Next</button>
+                <button class="btn btn-light" (click)="getlast()">last</button>
+              </div>
+
+
+
+            <br />
+                             <div class="container">
+                            <!-- <button class="btn btn-warning">Quiz</button>
+                            <button class="btn btn-light">Preview</button> -->
+                             <a routerLink="submission" class="btn btn-lg btn-primary" (click)="finalSubmit()">Submit Quiz</a>
+                             <a style="margin: 3px;" routerLink="Reset" class="btn btn-lg btn-danger" (click)="reset()">Reset Quiz</a>
+
+                             <div>
+                                <br />
+                                <div style="background-color: burlywood;">
+                                    <router-outlet> 
+                                        <ng-template [ngIf]="finalFlag">
+                                            <h2>Review of your Answers: </h2>
+                                            <p>Question Number 1: </p>
+                                            <h5>{{questionsInfo[0]['q']}}</h5>
+                                            <p>Answer is: {{compare[0]}} <span>Correct is: {{correct[0]}}</span> </p>
+                                            <br />
+
+                                            <p>Question Number 2: </p>
+                                            <h5>{{questionsInfo[1]['q']}}</h5>
+                                            <p>Answer is: {{compare[1]}} <span>Correct is: {{correct[1]}}</span></p>
+                                            <br />
+
+                                            <p>Question Number 3: </p>
+                                            <h5>{{questionsInfo[2]['q']}}</h5>
+                                            <p>Answer is: {{compare[2]}} <span>Correct is: {{correct[2]}}</span></p>
+                                        </ng-template>
+
+                                    </router-outlet>
+                                </div>
+                            </div>
+                            
+                            
+            </div>
+  
+    </ng-template>
+
+          
+</div>

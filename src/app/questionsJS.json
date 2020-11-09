@@ -1,0 +1,11 @@
+{
+    "questions":[
+        {"q":"How to declare a final varibale in Javascript?", 
+            "a": "const", "b":"final", "c": "var"},
+        {"q":"What is ()=> in Javascript?", 
+            "a": "arrow function", "b":"narrow function", "c": "callback funnction"},
+        {"q":"Does Javascript an OOP language?", 
+            "a": "true", "b":"false", "c": "none"}
+    ]
+}
+
